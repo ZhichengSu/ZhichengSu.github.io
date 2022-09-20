@@ -1,0 +1,38 @@
+$(function() {
+
+	// Teacher Info Initial SDAPP
+
+	
+	// Teacher menu click 
+	var menuClick = function(){
+		$(".teacher-head").on("click", function(event){
+			$(".teacher-body").stop(true,true).slideToggle(400);
+		})
+	}
+	
+	
+	// Teacher content tab
+	var teacherTab = function(){
+		$(".info-page-2 .container").sudyTab({
+			handle: ".teacher-nav .teacher-item",
+			content: ".teacher-main .teacher-list",
+			trigger: "click",
+			start: 1,
+			autoPlay: {
+				active: false,
+				interval: 5000,
+				pauseHover: true
+			}
+		})
+	}
+	
+	
+	// Teacher Info Execution function
+	$(function(){
+		menuClick();
+		teacherTab();
+	})
+
+
+
+});
